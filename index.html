@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeeun's PortFolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/my_reset.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <script src="./js/index.js" defer></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hdCon">
+        <div class="hd mw">
+          <div class="m_toggle">
+            <label for="toggle" class="toggleSwitch">
+              <span class="toggleButton"></span>
+              <span class="toggleNameL">LIGHT</span>
+              <span class="toggleNameD">DARK</span>
+            </label>
+          </div>
+          <h1 class="logo">
+            <a href="#"
+              ><img class="logoL" src="./img/logoLight.png" alt="logo"
+            /></a>
+            <a href="#"
+              ><img class="logoD" src="./img/logoDark.png" alt="logo"
+            /></a>
+          </h1>
+          <div class="ham on">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <nav class="gnb">
+            <a href="#Home">Home</a>
+            <a href="#Project">Project</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <div>
+              <label for="toggle" class="toggleSwitch">
+                <span class="toggleButton"></span>
+                <span class="toggleNameL">LIGHT</span>
+                <span class="toggleNameD">DARK</span>
+              </label>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <section class="home mw" id="Home">
+        <div class="homeTextCon">
+          <p>즐거운 마음으로</p>
+          <p class="changeText">효율적인 코드를 짜는</p>
+          <p>프론트엔드 개발자 이제은입니다.</p>
+        </div>
+      </section>
+      <section class="project mw" id="Project">
+        <h2 class="secHeading">Projects</h2>
+        <ul class="proList">
+          <li class="project proM">
+            <div class="proCon">
+              <img src="./img/projects/pro6_home.png" alt="pro6_home" />
+              <img src="./img/projects/pro6_detail.png" alt="pro6_detail" />
+              <img src="./img/projects/pro6_search.png" alt="pro6_search" />
+            </div>
+            <div class="proHover">
+              <div class="pcon">
+                <p>React-Native를 활용한</p>
+                <p>일본어 회화 학습 모바일앱 일화</p>
+              </div>
+              <div class="goBtn">
+                <div>
+                  <i class="fa-solid fa-plus"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://github.com/jeeun99/project06_Ilhwa"
+                  ></a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-link"></i>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project proM">
+            <div class="proCon">
+              <img src="./img/projects/pro5.png" alt="pro5" />
+              <img src="./img/projects/pro5_loading.png" alt="pro5_loading" />
+              <img src="./img/projects/pro5_detail.png" alt="pro5_detail" />
+            </div>
+            <div class="proHover">
+              <p>ChatGPT를 활용한 헬스트레이너 채팅 웹앱</p>
+              <div class="goBtn">
+                <div>
+                  <i class="fa-solid fa-plus"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://github.com/jeeun99/project05"
+                  ></a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-link"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://healthtrainners.pages.dev/"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project proM">
+            <div class="proCon">
+              <img src="./img/projects/pro3.png" alt="pro3" />
+              <img src="./img/projects/pro3_detail.png" alt="pro3_detail" />
+              <img src="./img/projects/pro3_w.png" alt="pro3_w" />
+            </div>
+            <div class="proHover">
+              <div class="pcon">
+                <p>CRUD 및 Node.js를 활용한</p>
+                <p>가게 후기 작성 웹앱 강구안호프</p>
+              </div>
+              <div class="goBtn">
+                <div>
+                  <i class="fa-solid fa-plus"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://github.com/jeeun99/project03_Hof"
+                  ></a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-link"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://port-0-project03-hof-1msx2blg1j8wd3.sel3.cloudtype.app/"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project proPc">
+            <div class="proCon">
+              <img src="./img/projects/pro4_pc.png" alt="pro1" />
+            </div>
+            <div class="proHover">
+              <div class="pcon">
+                <p>리액트 기반 지도API를 활용한</p>
+                <p>장애인 편의시설 확인 서비스 WITH</p>
+              </div>
+              <div class="goBtn">
+                <div>
+                  <i class="fa-solid fa-plus"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://github.com/jeeun99/project04_with"
+                  ></a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-link"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://jeeun99.github.io/project04_with/"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project proPc">
+            <div class="proCon">
+              <img src="./img/projects/pro2_pc.png" alt="pro1" />
+            </div>
+            <div class="proHover">
+              <div class="pcon">
+                <p>날씨 API를 연동시킨</p>
+                <p>대전시민천문대 리뉴얼 프로젝트</p>
+              </div>
+
+              <div class="goBtn">
+                <div>
+                  <i class="fa-solid fa-plus"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://github.com/jeeun99/project02_observatoryRenewal"
+                  ></a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-link"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://jeeun99.github.io/project02_observatoryRenewal/"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project proPc">
+            <div class="proCon">
+              <img src="./img/projects/pro1_pc.png" alt="pro1" />
+            </div>
+            <div class="proHover">
+              <div class="pcon">
+                <p>사용성 개선을 목적으로한</p>
+                <p>술담화 리뉴얼 프로젝트</p>
+              </div>
+
+              <div class="goBtn">
+                <div>
+                  <i class="fa-solid fa-plus"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://github.com/jeeun99/sooldamhwaProject"
+                  ></a>
+                </div>
+                <div>
+                  <i class="fa-solid fa-link"></i>
+                  <a
+                    target="_blank"
+                    class="link"
+                    href="https://jeeun99.github.io/sooldamhwaProject/"
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

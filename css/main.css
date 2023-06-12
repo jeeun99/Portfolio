@@ -1,0 +1,376 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap");
+/* font-family: 'Noto Sans', sans-serif; */
+@font-face {
+  font-family: "S-CoreDream-3Light";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* font-family: 'S-CoreDream-3Light'; */
+
+:root {
+  --mw: 1440px;
+  --black: #000;
+  --white: #fff;
+  --blueDarkMode: #879ff5;
+  --blueLightMode: #436bfb;
+}
+.wrap {
+  color: var(--black);
+  background-color: var(--white);
+}
+.wrap.on {
+  color: var(--white);
+  background-color: var(--black);
+}
+.mw {
+  max-width: var(--mw);
+  width: calc(100% - 2rem);
+  margin: 0 auto;
+}
+/* header */
+.hdCon {
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  background-color: var(--white);
+}
+.wrap.on .hdCon {
+  background-color: var(--black);
+}
+.hd {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+}
+.wrap.on .hd {
+  background-color: var(--black);
+}
+.wrap.on .logoL {
+  display: none;
+}
+.wrap .logoD {
+  display: none;
+}
+.wrap.on .logoD {
+  display: block;
+}
+.ham {
+  display: none;
+}
+.ham i {
+  font-size: 1.75rem;
+}
+.ham .fa-xmark {
+  display: none;
+  font-size: 2rem;
+}
+.m_toggle {
+  display: none;
+}
+.m_toggle .toggleSwitch {
+  margin: 30px 0;
+}
+.gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.gnb > a {
+  display: inline-block;
+  padding: 1rem 2rem;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  outline: none;
+}
+.gnb > a:hover {
+  color: var(--blueLightMode);
+}
+.wrap.on .gnb > a {
+  color: var(--white);
+}
+.wrap.on .gnb > a:hover {
+  color: var(--blueDarkMode);
+}
+
+.toggleSwitch {
+  width: 60px;
+  height: 25px;
+  display: block;
+  position: relative;
+  border-radius: 30px;
+  background-color: #fff;
+  cursor: pointer;
+  margin: 30px;
+  border: 1px solid var(--black);
+}
+.toggleSwitch .toggleButton {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: var(--black);
+}
+.toggleSwitch .toggleNameL,
+.toggleSwitch .toggleNameD {
+  font-family: "S-CoreDream-3Light";
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+}
+.toggleSwitch .toggleNameD {
+  display: none;
+  top: 50%;
+  left: 5px;
+  color: var(--black);
+}
+.toggleSwitch.active {
+  border: none;
+}
+.toggleSwitch.active .toggleNameD {
+  display: block;
+}
+.toggleSwitch.active .toggleNameL {
+  display: none;
+}
+
+.toggleSwitch.active .toggleButton {
+  left: calc(100% - 20px);
+  background: #000;
+}
+
+.toggleSwitch,
+.toggleButton,
+.toggleNameL,
+.toggleNameD {
+  transition: all 0.2s ease-in;
+}
+/* home */
+.home {
+  height: 100vh;
+  display: flex;
+  position: relative;
+}
+.homeTextCon {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-40%);
+}
+.homeTextCon > p {
+  font-family: "S-CoreDream-3Light";
+  font-weight: 300;
+  font-size: 64px;
+  padding-bottom: 1rem;
+}
+.homeTextCon .changeText {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.homeTextCon .changeText.show {
+  opacity: 1;
+}
+.wrap .changeText {
+  color: var(--blueLightMode);
+}
+.wrap.on .changeText {
+  color: var(--blueDarkMode);
+}
+/* Project */
+.project {
+  height: 100vh;
+}
+.wrap .secHeading {
+  padding-top: 160px;
+  padding-bottom: calc(60px - 2rem);
+  font-size: 36px;
+  font-family: "S-CoreDream-3Light";
+  font-weight: 600;
+  color: var(--blueLightMode);
+}
+.wrap.on .secHeading {
+  color: var(--blueDarkMode);
+}
+.proList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.proList > li {
+  width: calc((100% - 4rem) / 3);
+  height: 270px;
+  margin-right: 32px;
+  overflow: hidden;
+  margin-top: 2rem;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.proList > li:nth-of-type(3n) {
+  margin-right: 0;
+}
+.proList > li:nth-of-type(1) .proHover .goBtn div:nth-of-type(2) {
+  background-color: #eaeaea;
+  cursor: auto;
+}
+.proList > li:nth-of-type(1) .proHover .goBtn div:nth-of-type(2):hover i {
+  transform: scale(1);
+}
+.project {
+  position: relative;
+}
+.proList > li:hover .proHover {
+  bottom: 0;
+}
+.proCon {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.project.proPc .proCon img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.project.proM .proCon img {
+  width: calc(100% / 3 - 0.1rem);
+  height: 100%;
+  object-fit: fill;
+}
+.proHover {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  transition: 0.3s;
+  padding: 1rem 0.5rem;
+}
+.pcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pcon p:nth-of-type(2) {
+  padding-top: 0.5rem;
+}
+.proHover p {
+  color: var(--white);
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+}
+.proHover .goBtn {
+  display: flex;
+}
+.proHover .goBtn > div {
+  background-color: var(--white);
+  width: 56px;
+  height: 56px;
+  border-radius: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+.proHover .goBtn > div:first-of-type {
+  margin-right: 1rem;
+}
+.proHover .goBtn > div i {
+  font-size: 1.2rem;
+  transition: 0.3s;
+  color: var(--black);
+}
+.proHover .goBtn > div:hover i {
+  transform: scale(1.2);
+}
+.proHover .goBtn > div a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 800px) {
+  /*  */
+  .gnb {
+    display: none;
+    right: -100%;
+    transition: 0.4s;
+  }
+  .hd {
+    height: 50px;
+  }
+  .m_toggle {
+    display: block;
+  }
+  .ham {
+    display: block;
+    cursor: pointer;
+  }
+  .ham.on .fa-bars {
+    display: none;
+  }
+  .ham.on .fa-xmark {
+    display: block;
+    z-index: 100;
+  }
+  .ham.on ~ .gnb {
+    display: flex;
+    position: absolute;
+    background-color: #fafafa;
+    top: 50px;
+    right: 0;
+    height: 100vh;
+    flex-direction: column;
+    width: 50%;
+    justify-content: flex-start;
+  }
+  .wrap.on .ham.on ~ .gnb {
+    background-color: #181818;
+  }
+  .ham.on ~ .gnb a {
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+  }
+  .ham.on ~ .gnb a:hover {
+    background-color: var(--blueLightMode);
+    color: var(--white);
+  }
+  .wrap.on .ham.on ~ .gnb a:hover {
+    background-color: var(--blueDarkMode);
+  }
+  .ham.on ~ .gnb > div {
+    display: none;
+  }
+  .homeTextCon > p {
+    font-size: 24px;
+  }
+  .wrap .secHeading {
+    font-size: 20px;
+    padding-top: 80px;
+    padding-bottom: 1rem;
+  }
+  .proList > li {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+  .proHover p {
+    font-size: 16px;
+  }
+}
