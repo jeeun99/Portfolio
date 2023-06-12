@@ -1,10 +1,12 @@
 // toggle button js
-const $toggleBtn = document.querySelector(".toggleSwitch");
+const $toggleBtn = document.querySelectorAll(".toggleSwitch");
 const $wrap = document.querySelector(".wrap");
 
-$toggleBtn.addEventListener("click", () => {
-  $toggleBtn.classList.toggle("active");
-  $wrap.classList.toggle("on");
+$toggleBtn.forEach((toggle) => {
+  toggle.addEventListener("click", () => {
+    toggle.classList.toggle("active");
+    $wrap.classList.toggle("on");
+  });
 });
 
 // changeText js

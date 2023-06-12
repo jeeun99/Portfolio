@@ -29,6 +29,7 @@
   max-width: var(--mw);
   width: calc(100% - 2rem);
   margin: 0 auto;
+  border: 1px solid red;
 }
 /* header */
 .hdCon {
@@ -79,6 +80,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.gnb > div {
+  z-index: 100;
 }
 .gnb > a {
   display: inline-block;
@@ -302,7 +306,16 @@
   top: 0;
   left: 0;
 }
-
+/* About */
+.about {
+  height: 100vh;
+}
+.introduction {
+  width: 55%;
+  background-color: var(--black);
+  color: var(--white);
+}
+/* mobile 반응형 */
 @media (max-width: 800px) {
   /*  */
   .gnb {
@@ -359,6 +372,10 @@
   }
   .homeTextCon > p {
     font-size: 24px;
+  }
+  .project {
+    height: 100%;
+    padding-bottom: 1rem;
   }
   .wrap .secHeading {
     font-size: 20px;
