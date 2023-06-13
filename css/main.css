@@ -1,6 +1,8 @@
 @charset 'utf-8';
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap");
-/* font-family: 'Noto Sans', sans-serif; */
+/* font-family: 'Noto Sans', sans-serif; 
+300: light, 400: regular, 700: bold
+*/
 @font-face {
   font-family: "S-CoreDream-3Light";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff")
@@ -29,7 +31,6 @@
   max-width: var(--mw);
   width: calc(100% - 2rem);
   margin: 0 auto;
-  border: 1px solid red;
 }
 /* header */
 .hdCon {
@@ -311,9 +312,170 @@
   height: 100vh;
 }
 .introduction {
-  width: 55%;
+  position: relative;
+}
+
+.introductionBox {
+  position: absolute;
+  width: 50%;
+  height: 100%;
   background-color: var(--black);
+}
+.wrap.on .introductionBox {
+  background-color: var(--white);
+}
+.introduction .mw {
+  display: flex;
+  justify-content: space-between;
+}
+.introductionContent {
+  position: relative;
+  z-index: 10;
   color: var(--white);
+  width: 50%;
+  padding: 1rem;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.wrap.on .introductionContent {
+  color: var(--black);
+}
+.myInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.myInfoImg {
+  width: 27%;
+}
+.myInfoImg img {
+  width: 100%;
+}
+.myInfoText {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+}
+.myInfoText > p {
+  padding-top: 0.5rem;
+}
+.myInfoText > p:nth-of-type(odd) {
+  width: 20%;
+}
+.myInfoText > p:nth-of-type(even) {
+  width: 80%;
+}
+.aboutText {
+  padding-top: 2rem;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.aboutText > p:nth-of-type(1) {
+  padding-bottom: 1.25rem;
+}
+.aboutText p span {
+  font-weight: 700;
+  color: var(--blueDarkMode);
+}
+.wrap.on .aboutText p span {
+  color: var(--blueLightMode);
+}
+.skillsBox {
+  width: 50%;
+  padding: 1rem;
+  padding-left: 2rem;
+}
+.skillsBox > div {
+  padding-bottom: 2rem;
+}
+.sTitle {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+.sCon {
+  padding-bottom: 0.5rem;
+}
+.techIcons {
+  position: relative;
+}
+.tech {
+  padding-right: 1rem;
+  cursor: pointer;
+}
+.techIcons > .html5.on {
+  content: url("../img/techIcons/html5.png");
+}
+.techIcons > .css3.on {
+  content: url("../img/techIcons/css3.png");
+}
+.techIcons > .js.on {
+  content: url("../img/techIcons/js.png");
+}
+.techIcons > .react.on {
+  content: url("../img/techIcons/react.png");
+}
+.techIcons > .nodejs.on {
+  content: url("../img/techIcons/nodejs.png");
+}
+.techIcons > .mongodb.on {
+  content: url("../img/techIcons/mongodb.png");
+}
+.techIcons > .aws.on {
+  content: url("../img/techIcons/aws.png");
+}
+.techIcons > .cloudflare.on {
+  content: url("../img/techIcons/cloudflare.png");
+}
+.techIcons > .firebase.on {
+  content: url("../img/techIcons/firebase.png");
+}
+.techDesc {
+  display: none;
+  position: absolute;
+  top: calc(100% + 2rem);
+  left: 0;
+  padding: 1rem;
+  border: 1px solid var(--black);
+}
+.wrap.on .techDesc {
+  border: 1px solid var(--white);
+}
+.techIcons > .html5.on ~ .techDesc.html5 {
+  display: block;
+}
+.techIcons > .css3.on ~ .techDesc.css3 {
+  display: block;
+}
+.techIcons > .js.on ~ .techDesc.js {
+  display: block;
+}
+.techIcons > .react.on ~ .techDesc.react {
+  display: block;
+}
+.techIcons > .nodejs.on ~ .techDesc.nodejs {
+  display: block;
+}
+.techIcons > .mongodb.on ~ .techDesc.mongodb {
+  display: block;
+}
+.techIcons > .aws.on ~ .techDesc.aws {
+  display: block;
+}
+.techIcons > .firebase.on ~ .techDesc.firebase {
+  display: block;
+}
+.techIcons > .cloudflare.on ~ .techDesc.cloudflare {
+  display: block;
+}
+
+.tdContent {
+  padding-top: 1rem;
 }
 /* mobile 반응형 */
 @media (max-width: 800px) {
