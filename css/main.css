@@ -32,6 +32,13 @@
   width: calc(100% - 2rem);
   margin: 0 auto;
 }
+.home,
+.project,
+.about,
+.contact {
+  height: 100vh;
+}
+
 /* header */
 .hdCon {
   width: 100%;
@@ -161,7 +168,6 @@
 }
 /* home */
 .home {
-  height: 100vh;
   display: flex;
   position: relative;
 }
@@ -191,9 +197,7 @@
   color: var(--blueDarkMode);
 }
 /* Project */
-.project {
-  height: 100vh;
-}
+
 .wrap .secHeading {
   padding-top: 160px;
   padding-bottom: calc(60px - 2rem);
@@ -209,10 +213,13 @@
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  position: relative;
 }
 .proList > li {
+  position: relative;
   width: calc((100% - 4rem) / 3);
-  height: 270px;
+  height: inherit;
+  padding-top: 20%;
   margin-right: 32px;
   overflow: hidden;
   margin-top: 2rem;
@@ -228,26 +235,27 @@
 .proList > li:nth-of-type(1) .proHover .goBtn div:nth-of-type(2):hover i {
   transform: scale(1);
 }
-.project {
-  position: relative;
-}
+
 .proList > li:hover .proHover {
   bottom: 0;
 }
 .proCon {
+  position: absolute;
+  top: 0;
+  left: 0;
   height: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .project.proPc .proCon img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 .project.proM .proCon img {
-  width: calc(100% / 3 - 0.1rem);
+  width: calc(100% / 3);
   height: 100%;
-  object-fit: fill;
 }
 .proHover {
   display: flex;
@@ -308,25 +316,28 @@
   left: 0;
 }
 /* About */
-.about {
-  height: 100vh;
-}
+
 .introduction {
   position: relative;
+  margin-top: 5rem;
 }
 
-.introductionBox {
+.containBox {
   position: absolute;
   width: 50%;
   height: 100%;
   background-color: var(--black);
 }
-.wrap.on .introductionBox {
+.wrap.on .containBox {
   background-color: var(--white);
+}
+.introduction .containBox {
+  left: 0;
 }
 .introduction .mw {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .introductionContent {
   position: relative;
@@ -399,6 +410,8 @@
   padding-bottom: 1rem;
 }
 .sCon {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
   padding-bottom: 0.5rem;
 }
 .techIcons {
@@ -473,10 +486,79 @@
 .techIcons > .cloudflare.on ~ .techDesc.cloudflare {
   display: block;
 }
-
+.tdTitle {
+  font-family: "S-CoreDream-3Light";
+  font-size: 20px;
+}
 .tdContent {
+  font-family: "Noto Sans", sans-serif;
   padding-top: 1rem;
 }
+/* contact */
+.contactBox {
+  position: relative;
+  width: 100%;
+  margin-top: 5rem;
+}
+.contactBox .containBox {
+  right: 0;
+}
+.contactBox .mw {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.l_text,
+.r_text {
+  width: 50%;
+}
+.l_text {
+  padding: 1rem;
+  padding-left: 0;
+}
+.r_text {
+  padding: 1rem;
+  z-index: 10;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.wrap.on .r_text {
+  color: var(--black);
+}
+.contactTextCon {
+  width: 95%;
+}
+.contactTextCon .bigText {
+  font-family: "S-CoreDream-3Light";
+  font-weight: 400;
+  font-size: 48px;
+  padding-bottom: 1rem;
+}
+.contactTextCon .bigText:nth-of-type(2) {
+  padding-left: 3rem;
+}
+.contactTextCon .subText {
+  padding-top: 3rem;
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+}
+.contactInfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+.contactInfo > i {
+  display: inline-block;
+  width: 10%;
+  font-size: 1.25rem;
+}
+.contactInfo > p {
+  width: 90%;
+}
+
 /* mobile 반응형 */
 @media (max-width: 800px) {
   /*  */
@@ -548,8 +630,79 @@
     width: 100%;
     margin-right: 0;
     margin-top: 1rem;
+    padding-top: 50%;
   }
   .proHover p {
     font-size: 16px;
+  }
+  /* project  */
+  .containBox {
+    display: none;
+  }
+  .introductionContent {
+    width: 100%;
+    background-color: var(--black);
+    padding-left: 1rem;
+  }
+  .wrap.on .introductionContent {
+    background-color: var(--white);
+  }
+  .skillsBox {
+    width: 100%;
+  }
+  .myInfoText > p:nth-of-type(odd) {
+    width: 40%;
+  }
+  .myInfoText > p:nth-of-type(even) {
+    width: 60%;
+  }
+  .skillsBox {
+    padding: 0;
+    padding-top: 2rem;
+  }
+  .skillsBox > div {
+    padding-bottom: 1rem;
+  }
+  .sTitle {
+    font-size: 24px;
+    padding-bottom: 0.5rem;
+  }
+  .sCon {
+    padding-bottom: 0.5rem;
+  }
+  .sEdu .sCon span {
+    display: block;
+    padding-bottom: 0.3rem;
+  }
+  .tdTitle {
+    font-size: 1rem;
+  }
+  .tdContent {
+    font-size: 14px;
+  }
+  .tech {
+    height: 30px;
+    padding-right: 0.5rem;
+  }
+  .techDesc {
+    top: calc(100% + 1rem);
+  }
+  /* contact */
+  .l_text,
+  .r_text {
+    width: 100%;
+  }
+  .r_text {
+    background-color: var(--black);
+    padding-left: 1rem;
+  }
+  .wrap.on .r_text {
+    background: var(--white);
+  }
+  .contactTextCon {
+    width: 100%;
+  }
+  .contactTextCon .bigText {
+    font-size: 24px;
   }
 }
