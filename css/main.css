@@ -518,6 +518,7 @@
 }
 .r_text {
   padding: 1rem;
+  padding-left: 2rem;
   z-index: 10;
   color: var(--white);
   display: flex;
@@ -549,6 +550,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
+  padding-top: 1rem;
 }
 .contactInfo > i {
   display: inline-block;
@@ -556,6 +558,8 @@
   font-size: 1.25rem;
 }
 .contactInfo > p {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 18px;
   width: 90%;
 }
 
@@ -617,9 +621,14 @@
   .homeTextCon > p {
     font-size: 24px;
   }
-  .project {
+  .project,
+  .about,
+  .contact {
     height: 100%;
     padding-bottom: 1rem;
+  }
+  .contact {
+    margin-top: 5rem;
   }
   .wrap .secHeading {
     font-size: 20px;
@@ -704,5 +713,12 @@
   }
   .contactTextCon .bigText {
     font-size: 24px;
+  }
+  .contactTextCon .subText {
+    font-size: 1rem;
+    padding-top: 2rem;
+  }
+  .contactInfo > p {
+    font-size: 1rem;
   }
 }
