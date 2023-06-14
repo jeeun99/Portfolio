@@ -32,10 +32,7 @@
   width: calc(100% - 2rem);
   margin: 0 auto;
 }
-.home,
-.project,
-.about,
-.contact {
+.section {
   height: 100vh;
 }
 
@@ -196,6 +193,27 @@
 .wrap.on .changeText {
   color: var(--blueDarkMode);
 }
+.gotop {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  background-color: var(--blueLightMode);
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  color: var(--white);
+  z-index: 20;
+}
+.gotop i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.wrap.on .gotop {
+  background-color: var(--blueDarkMode);
+}
+
 /* Project */
 
 .wrap .secHeading {
@@ -622,8 +640,7 @@
     font-size: 24px;
   }
   .project,
-  .about,
-  .contact {
+  .about {
     height: 100%;
     padding-bottom: 1rem;
   }
@@ -704,9 +721,13 @@
   .r_text {
     background-color: var(--black);
     padding-left: 1rem;
+    margin-top: 4rem;
   }
   .wrap.on .r_text {
     background: var(--white);
+  }
+  .contactBox {
+    margin-top: 0;
   }
   .contactTextCon {
     width: 100%;

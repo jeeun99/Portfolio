@@ -67,3 +67,34 @@ const $ham = document.querySelector(".ham");
 $ham.addEventListener("click", () => {
   $ham.classList.toggle("on");
 });
+
+// scroll Down
+const sections = document.querySelectorAll(".section");
+const gotop = document.querySelector(".gotop");
+
+window.addEventListener("resize", () => {
+  setTimeout(() => {
+    location.reload();
+  }, 1000);
+});
+
+if (window.innerWidth > 600) {
+  sections.forEach((section) => {
+    section.addEventListener("mousewheel", (e) => {
+      e.preventDefault();
+      const delta = e.wheelDelta ? e.wheelDelta : -e.detail;
+      const nextSection =
+        delta < 0 ? section.nextElementSibling : section.previousElementSibling;
+      if (nextSection) {
+        const moveTop =
+          window.pageYOffset + nextSection.getBoundingClientRect().top;
+        window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
+      }
+    });
+  });
+}
+
+gotop.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
