@@ -331,6 +331,9 @@
   transition: 0.3s;
   color: var(--black);
 }
+.proHover .goBtn > div i.fa-github-alt {
+  font-size: 1.5rem;
+}
 .proHover .goBtn > div:hover i {
   transform: scale(1.2);
 }

@@ -52,6 +52,9 @@ const texts = [
 let index = 0;
 const changeTextElement = document.querySelector(".changeText");
 
+setTimeout(() => {
+  changeTextElement.classList.add("show");
+}, 300);
 function changeText() {
   changeTextElement.textContent = texts[index];
   changeTextElement.classList.add("show");
