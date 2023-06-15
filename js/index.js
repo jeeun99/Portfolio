@@ -71,6 +71,7 @@ $ham.addEventListener("click", () => {
 // scroll Down
 const sections = document.querySelectorAll(".section");
 const gotop = document.querySelector(".gotop");
+const pgLinks = document.querySelectorAll(".gnb > a");
 
 window.addEventListener("resize", () => {
   setTimeout(() => {
@@ -78,7 +79,7 @@ window.addEventListener("resize", () => {
   }, 1000);
 });
 
-if (window.innerWidth > 600) {
+if (window.innerWidth > 800) {
   sections.forEach((section) => {
     section.addEventListener("mousewheel", (e) => {
       e.preventDefault();
@@ -97,4 +98,17 @@ if (window.innerWidth > 600) {
 gotop.addEventListener("click", (e) => {
   e.preventDefault();
   window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+});
+
+pgLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+    const section = document.querySelector(link.getAttribute("href"));
+    const moveTop = section.offsetTop;
+    window.scrollTo({ top: moveTop, left: 0, behavior: "smooth" });
+    pgLinks.forEach((a) => {
+      a.classList.remove("on");
+    });
+    link.classList.add("on");
+  });
 });

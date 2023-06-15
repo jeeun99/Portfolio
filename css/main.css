@@ -96,13 +96,19 @@
   font-size: 18px;
   outline: none;
 }
-.gnb > a:hover {
-  color: var(--blueLightMode);
-}
 .wrap.on .gnb > a {
   color: var(--white);
 }
+.gnb > a:hover {
+  color: var(--blueLightMode);
+}
 .wrap.on .gnb > a:hover {
+  color: var(--blueDarkMode);
+}
+.gnb > a.on {
+  color: var(--blueLightMode);
+}
+.wrap.on .gnb > a.on {
   color: var(--blueDarkMode);
 }
 
@@ -178,6 +184,8 @@
   font-weight: 300;
   font-size: 64px;
   padding-bottom: 1rem;
+
+  letter-spacing: -3px;
 }
 .homeTextCon .changeText {
   opacity: 0;
@@ -217,7 +225,7 @@
 /* Project */
 
 .wrap .secHeading {
-  padding-top: 160px;
+  padding-top: 120px;
   padding-bottom: calc(60px - 2rem);
   font-size: 36px;
   font-family: "S-CoreDream-3Light";
@@ -337,7 +345,7 @@
 
 .introduction {
   position: relative;
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .containBox {
@@ -516,7 +524,7 @@
 .contactBox {
   position: relative;
   width: 100%;
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 .contactBox .containBox {
   right: 0;
@@ -555,14 +563,15 @@
   font-size: 48px;
   padding-bottom: 1rem;
 }
-.contactTextCon .bigText:nth-of-type(2) {
-  padding-left: 3rem;
-}
+
 .contactTextCon .subText {
   padding-top: 3rem;
   font-family: "Noto Sans", sans-serif;
   font-size: 18px;
   font-weight: 400;
+}
+.contactTextCon .subText:nth-of-type(2n) {
+  padding-top: 0.5rem;
 }
 .contactInfo {
   display: flex;
@@ -575,10 +584,44 @@
   width: 10%;
   font-size: 1.25rem;
 }
-.contactInfo > p {
+.contactInfo > p,
+.contactInfo > div {
   font-family: "Noto Sans", sans-serif;
   font-size: 18px;
   width: 90%;
+}
+.contactInfo.kakao > .kakaoImg {
+  padding: 1rem;
+  width: 30%;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.contactInfo.kakao > .kakaoImg > .qrHide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  background-color: var(--black);
+  transition: 0.4s;
+}
+.wrap.on .contactInfo.kakao > .kakaoImg > .qrHide {
+  background-color: var(--white);
+}
+.qrHide > p {
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  transform: translate(0, -100%);
+}
+.contactInfo.kakao > .kakaoImg > img {
+  width: 100%;
+}
+.contactInfo.kakao > .kakaoImg:hover > .qrHide {
+  left: 100%;
 }
 
 /* mobile 반응형 */
