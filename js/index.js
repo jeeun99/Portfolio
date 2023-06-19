@@ -38,7 +38,13 @@ $techIcons.forEach((icons) => {
     $techIcons.forEach((icons) => {
       icons.classList.remove("on");
     });
-    icons.classList.add("on");
+
+    if (icons.classList.contains("html5") || icons.classList.contains("css3")) {
+      $techIcons[0].classList.add("on");
+      $techIcons[1].classList.add("on");
+    } else {
+      icons.classList.add("on");
+    }
   });
 });
 // ---------------------------------------------
