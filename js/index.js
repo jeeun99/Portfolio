@@ -121,3 +121,14 @@ pgLinks.forEach((link) => {
     link.classList.add("on");
   });
 });
+window.addEventListener("scroll", () => {
+  const scrollTop = window.scrollY;
+  sections.forEach((section, i) => {
+    if (scrollTop >= section.offsetTop - 50) {
+      pgLinks.forEach((a) => {
+        a.classList.remove("on");
+      });
+      pgLinks[i].classList.add("on");
+    }
+  });
+});
