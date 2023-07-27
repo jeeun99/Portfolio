@@ -557,6 +557,18 @@
 .wrap.on .r_text {
   color: var(--black);
 }
+.r_text a {
+  color: var(--white);
+}
+.wrap.on .r_text a {
+  color: var(--black);
+}
+.r_text a:hover {
+  color: var(--blueDarkMode);
+}
+.wrap.on .r_text a:hover {
+  color: var(--blueLightMode);
+}
 .contactTextCon {
   width: 95%;
 }
